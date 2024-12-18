@@ -11,7 +11,7 @@ class Booking(models.Model):
     no_of_guests = models.IntegerField(
         validators= [validators.MinValueValidator(1), validators.MaxValueValidator(999999)]
     )
-    booking_date = models.DateTimeField(unique_for_date=True)
+    booking_date = models.DateTimeField()
     
 class Menu(models.Model):
     id = models.IntegerField(
